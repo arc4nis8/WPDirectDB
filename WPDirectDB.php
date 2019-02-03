@@ -124,8 +124,7 @@ public function get_posts_bycategory($term_id_or_title, $error_file, $error_line
 
 	// If there are no posts
 	if (empty($posts_final_arr)) {
-		trigger_error("WBDirectDB: Did not find any posts.", E_USER_NOTICE);
-		return false; // Error
+		return []; // Return empty array
 	}
 
 	return $posts_final_arr;
